@@ -1,0 +1,49 @@
+<html>
+
+	<body onload="settimer();">
+
+		<style>
+		</style>
+		
+		<script>
+		var money = 0;
+		var oil = 0;
+		
+		var minner = 0;
+		var drill = 0;
+		
+		var stone = 0;
+		var copper = 0;
+		var silver = 0;
+		
+		function settimer(){
+		setInterval(onesec, 1000);
+		}
+		function onesec(){
+			stone = stone + minner + drill;
+			document.getElementById("money").innerHTML = money;
+		}
+		function settimer(){
+		setInterval(twosec, 2000);
+		}
+		function twosec(){
+			copper = copper + minner + drill;
+		}
+		function settimer(){
+		setInterval(thrsec, 3000);
+		}
+		function thrsec(){
+			silver = silver minner + drill;
+		}
+		
+		
+		</script>
+
+	Money: <a id="money"><a>
+
+
+
+
+	</body>
+
+</html>

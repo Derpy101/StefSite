@@ -1,0 +1,161 @@
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Stefsite</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body onload="settimer();">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<span class="avatar"><img src="images/avatar.jpg" alt="" /></span>
+						<h1>This is <strong>Stefsite</strong>, a website with games and much more!<br />
+						Enjoy!</h1>
+						<ul class="icons">
+							<li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon style2 fa-500px"><span class="label">500px</span></a></li>
+							<li><a href="#" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
+						</ul>
+					</header>
+
+				<!-- Main -->
+					<section id="main">
+
+						<!-- Thumbnails -->
+							<section class="thumbnails">
+								<div>
+									<a href="images/shop.jpg">
+										<img src="images/shop.jpg" alt="" onclick= clicked4() />
+										<h3>Item Shop</h3>
+									</a>
+									<a href="images/fulls/02.jpg">
+										<img src="images/thumbs/02.jpg" alt="" />
+										<h3>2</h3>
+									</a>
+								</div>
+								<div>
+									<a href="google.com">
+										<img src="images/cookie.png" alt="" onclick= clicked1() />
+										<h3>Cookie Clicker</h3>
+									</a>
+									<a href="images/fulls/04.jpg">
+										<img src="images/thumbs/04.jpg" alt="" />
+										<h3>4</h3>
+									</a>
+								</div>
+								<div>
+									<a href="images/music.jpg">
+										<img src="images/music.jpg" alt="" onclick= clicked2() />
+										<h3>Music</h3>
+									</a>
+									<a href="images/admin.png">
+										<img src="images/admin.png" alt=""onclick= clicked3() />
+										<h3>Admin</h3>
+									</a>
+								</div>
+							</section>
+							
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p>&copy;Stefsite, All rights reserved.</p>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+		
+		
+		
+		
+		<script>
+		alert("Merry Christmas!!!!!\nCheck Out Our sale in the shop!");
+		</script>
+			
+			
+			
+			
+			
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script>
+				function clicked1(){
+					alert("Redirecting To Cookie Clicker Login....");
+					window.location="index.php?";
+				}
+				
+				function clicked2(){
+					alert("Redirecting To Sound Page....");
+					window.location="sound.php";
+				}
+				
+				function clicked3(){
+					var password1 = prompt("password:");
+					if (password1 == 20009){
+						window.location="admin.php?";
+					}
+					else{
+						alert("Incorect Password");
+					}
+				}
+				
+				function clicked4(){
+					alert("Redirecting To Shop... ");
+					window.location="shoplogin.php?";
+				}
+			
+			</script>
+
+<script>
+function settimer(){
+	setInterval(mytimer, 300000);
+	 
+}
+var moneys = 0;
+function mytimer(){
+	var aws = prompt("Password:                (No Caps)    ");
+	alert("You Won $");
+	moneys = 1 * getCookie(aws + ".moneys");
+	moneys = moneys + 5;
+	setCookie(aws + ".moneys",moneys,730);
+	alert(moneys);
+	
+}
+
+function setCookie(cname, cvalue, exdays) {
+	var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + "; " + expires;
+}
+function getCookie(cname) {
+	var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+		var c = ca[i];
+        while (c.charAt(0) == ' ') {
+			c = c.substring(1);
+			}
+			if (c.indexOf(name) == 0) {
+				return c.substring(name.length, c.length);
+				}
+				}
+				return "";
+				}
+
+</script>
+
+
+	</body>
+</html>
